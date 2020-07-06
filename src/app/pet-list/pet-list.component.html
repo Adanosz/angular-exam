@@ -1,0 +1,7 @@
+<div *ngFor="let pet of pets">
+  <p appBackGround [petType]="pet.type"> {{pet.name}}</p>
+  <p>{{pet.type}}</p>
+  <p>{{pet.description | maxLength }}</p>
+</div>
+
+<button [routerLink]="['/add-pet']">Add new pet</button>

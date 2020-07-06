@@ -1,0 +1,10 @@
+<form [formGroup]="petAddForm">
+  <label for="name" ><input type="text" formControlName="name">name</label> <br>
+  <label for="type" ><select formControlName="type">
+    <option value="" disabled>Cat or Dog?</option>
+    <option value= 1>DOG</option>
+    <option value= 2>CAT</option>
+</select>type</label> <br>
+  <label for="description" ><input type="text" formControlName="description">description</label> <br>
+</form>
+<button [disabled]="petAddForm.invalid" (click)="onAdd()" [routerLink]="['/']" >Add pet</button>

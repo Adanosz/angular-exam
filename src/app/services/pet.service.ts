@@ -66,4 +66,14 @@ export class PetService {
         "Mauris posuere sit amet ex nec gravida."
     },
   ]);
+  
+  public fetchPets() {
+    return[...this._pets$.getValue()];
+  }
+
+  addNewPet(pet: Pet) {
+    let pets = this._pets$.getValue();
+    pets.push(pet);
+    this._pets$.next(pets);
+  }
 }
